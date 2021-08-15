@@ -1,38 +1,50 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none !important;
+}
+body {
+    background-color: #263238;    
+}
+ul{
+    list-style: none;     
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.coinlist-image{
+    width: 50px;
+}
+.coinlist-item{
+    display: flex;        
+}
+.coin-summary{
+    border-color: white !important;
+    border-style: outset !important;
+}
+.coin-data-category{
+    font-size: 10px;
+    align-items: left;
+}
+.delete-icon{
+    display: none;
+    position: absolute;
+    right: 6px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.coin:hover .delete-icon{
+    display: block;
+    font-size: 18px;    
+    right: 0;
+    color: red;
+    z-index: 10;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.myCanvas{
+    max-height: 250px;
+    max-width: 1300px;
+    
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media screen and (max-width: 600px) {
+    .myCanvas{
+        max-width: 500px;
+    }
 }
